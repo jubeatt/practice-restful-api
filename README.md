@@ -32,6 +32,6 @@ npm run server
 
 ## 檔案說明
 
-- `db.json`：它是用來儲存所以有資料的資料庫
-- `reset.sh`：需要重設資料庫的資料時，可以執行這個 shell script（`sh reset.sh`），會重新寫入預設的 20 本書籍
+- `db.json`：它是用來儲存所有資料的資料庫
+- `reset.sh`：需要重設資料庫時，可以執行這個 shell script（`sh reset.sh`），會重新寫入預設的 20 本書籍
 - `example1.js` 和 `example2.js` 為 JavaScript 串接 API 的範例，題目是參考 [這邊](https://github.com/Lidemy/mentor-program-5th/tree/master/homeworks/week4) 來撰寫的。
