@@ -42,6 +42,7 @@ function getAllBooks() {
       const books = JSON.parse(body)
       books.forEach((book) => console.log(`${book.id}. ${book.name}`))
     } catch (error) {
+      console.log('解析資料時發生錯誤 :(')
       console.error(error.message)
     }
   })
@@ -65,6 +66,7 @@ function getBookById(id) {
       const book = JSON.parse(body)
       console.log(book.name || `找不到 id 為 "${id}" 的書本。`)
     } catch (error) {
+      console.log('解析資料時發生錯誤 :(')
       console.error(error.message)
     }
   })

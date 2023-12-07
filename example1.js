@@ -7,12 +7,18 @@ function getBooks(limit) {
 
   request(url, (err, res, body) => {
     if (err) {
-      console.error('cannot get books')
+      console.error('糟糕，發生了未知錯誤 :(')
+      console.log(err.message)
       return
     }
 
-    const books = JSON.parse(body)
-    books.forEach((book, index) => console.log(`${index + 1} ${book.name}`))
+    try {
+      const books = JSON.parse(body)
+      books.forEach((book) => console.log(`${book.id} ${book.name}`))
+    } catch (error) {
+      console.log('解析資料時發生錯誤 :(')
+      console.log(error.message)
+    }
   })
 }
 
